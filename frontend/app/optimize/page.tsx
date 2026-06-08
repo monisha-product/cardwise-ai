@@ -12,7 +12,7 @@ export default function OptimizeTransaction() {
             Enter transaction details and we’ll recommend the best card.
           </p>
   
-          <form className="mt-8 space-y-5">
+          <form action="/recommendation" className="mt-8 space-y-5">
             <input
               className="w-full rounded-lg border p-3"
               placeholder="Amount e.g. 20000"
