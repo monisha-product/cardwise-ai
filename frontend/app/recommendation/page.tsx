@@ -1,6 +1,12 @@
 import Link from "next/link";
+import { getBestCard } from "@/lib/recommendation";
 
 export default function RecommendationResult() {
+  const amount = 20000;
+  const category = "travel";
+
+  const { bestCard, rankedCards } = getBestCard(amount, category);
+
   return (
     <main className="min-h-screen bg-white p-10">
       <div className="flex items-center justify-between border-b pb-6">
@@ -16,24 +22,28 @@ export default function RecommendationResult() {
 
         <div className="mt-8 rounded-xl border p-8 shadow-sm">
           <p className="text-sm font-medium text-gray-500">Recommended Card</p>
-          <h3 className="mt-2 text-4xl font-bold">Axis Atlas</h3>
+          <h3 className="mt-2 text-4xl font-bold">{bestCard.name}</h3>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div className="rounded-lg bg-gray-50 p-5">
               <p className="text-sm text-gray-500">Estimated Reward</p>
-              <p className="mt-2 text-3xl font-bold">₹800</p>
+              <p className="mt-2 text-3xl font-bold">
+                ₹{bestCard.rewardValue.toFixed(0)}
+              </p>
             </div>
 
             <div className="rounded-lg bg-gray-50 p-5">
-              <p className="text-sm text-gray-500">Category</p>
-              <p className="mt-2 text-3xl font-bold">Travel</p>
+              <p className="text-sm text-gray-500">Reward Rate</p>
+              <p className="mt-2 text-3xl font-bold">
+                {bestCard.rewardRate}%
+              </p>
             </div>
           </div>
 
           <div className="mt-8">
             <p className="text-sm font-medium text-gray-500">Reason</p>
             <p className="mt-2 text-gray-700">
-              Axis Atlas gives the highest reward value for this travel
+              {bestCard.name} gives the highest reward value for this {category}
               transaction compared to the other saved cards.
             </p>
           </div>
@@ -43,20 +53,17 @@ export default function RecommendationResult() {
           <h3 className="text-xl font-semibold">Card Comparison</h3>
 
           <div className="mt-5 space-y-4">
-            <div className="flex items-center justify-between rounded-lg bg-gray-50 p-4">
-              <span>Axis Atlas</span>
-              <span className="font-semibold">₹800</span>
-            </div>
-
-            <div className="flex items-center justify-between rounded-lg bg-gray-50 p-4">
-              <span>HDFC Diners Black</span>
-              <span className="font-semibold">₹600</span>
-            </div>
-
-            <div className="flex items-center justify-between rounded-lg bg-gray-50 p-4">
-              <span>Amex Platinum Travel</span>
-              <span className="font-semibold">₹400</span>
-            </div>
+            {rankedCards.map((card) => (
+              <div
+                key={card.name}
+                className="flex items-center justify-between rounded-lg bg-gray-50 p-4"
+              >
+                <span>{card.name}</span>
+                <span className="font-semibold">
+                  ₹{card.rewardValue.toFixed(0)}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
