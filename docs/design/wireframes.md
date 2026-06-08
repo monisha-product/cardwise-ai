@@ -1,113 +1,84 @@
 # Wireframes
 
-## Landing Page
+## Figma File
+
+Figma Link:
+https://www.figma.com/design/BHtV41dUgnzgCXldyXmymy/CardWise-AI---Wireframes?node-id=0-1&t=jiCWw3eORD7WtHzJ-1
+
+---
+
+## Screen 01 - Landing Page
 
 ### Objective
 
-Explain the value proposition and drive users to start using the product.
+Explain product value proposition and encourage users to get started.
 
-### Components
+### Key Components
 
-Header
-
-* Logo
-* Login button
-
-Hero Section
-
-* Headline
-* Subheadline
+* Header
+* Hero Section
 * Get Started CTA
-
-Features Section
-
-* Reward Optimization
-* Cashback Maximization
-* AI Recommendations
-
-Footer
-
-* About
-* Contact
+* Feature Cards
 
 ---
 
-## Dashboard
+## Screen 02 - Dashboard
 
 ### Objective
 
-Provide overview of user's cards and recommendations.
+Provide overview of user's card portfolio and optimization activity.
 
-### Components
+### Key Components
 
-Navigation
-
-Cards Summary
-
-* Total Cards
-* Estimated Annual Rewards
-
-Recent Recommendations
-
-Primary CTA
-
-* Optimize Transaction
+* Saved Cards
+* Recommendations This Month
+* Estimated Savings
+* Optimize Transaction CTA
 
 ---
 
-## Add Card
+## Screen 03 - Add Card
 
 ### Objective
 
-Allow user to add a credit card.
+Allow users to add new credit cards and reward configurations.
 
-### Fields
+### Key Components
 
 * Card Name
 * Issuer
 * Annual Fee
 * Reward Rates
-
-Action
-
-* Save Card
+* Save Card CTA
 
 ---
 
-## Optimize Transaction
+## Screen 04 - Optimize Transaction
 
 ### Objective
 
-Generate recommendation.
+Collect transaction details for recommendation generation.
 
-### Inputs
+### Key Components
 
 * Amount
 * Category
 * Merchant
-
-Action
-
-* Recommend Card
+* Transaction Type
+* Recommend Best Card CTA
 
 ---
 
-## Recommendation Result
+## Screen 05 - Recommendation Result
 
 ### Objective
 
-Display recommendation and comparison.
+Display best card recommendation and reward comparison.
 
-### Components
+### Key Components
 
-Recommended Card
-
-Estimated Reward Value
-
-Reason
-
-Comparison Table
-
-* Card
-* Reward Value
-* Rank
+* Recommended Card
+* Estimated Reward
+* Recommendation Reason
+* Card Comparison Table
+* Optimize Another Transaction CTA
