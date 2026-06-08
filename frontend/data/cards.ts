@@ -1,14 +1,32 @@
 export const cards = [
     {
       name: "Axis Atlas",
+      issuer: "Axis Bank",
+      baseReward: 1,
       travelReward: 4,
       diningReward: 2,
-      shoppingReward: 1,
+      shoppingReward: 1.5,
+      groceryReward: 1,
+      fuelReward: 0.5,
     },
     {
       name: "HDFC Diners Black",
+      issuer: "HDFC Bank",
+      baseReward: 1.5,
       travelReward: 3,
       diningReward: 5,
       shoppingReward: 2,
+      groceryReward: 1,
+      fuelReward: 0.5,
+    },
+    {
+      name: "Amex Platinum Travel",
+      issuer: "American Express",
+      baseReward: 1,
+      travelReward: 2,
+      diningReward: 3,
+      shoppingReward: 1,
+      groceryReward: 1,
+      fuelReward: 0,
     },
   ];
